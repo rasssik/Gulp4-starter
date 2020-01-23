@@ -21,35 +21,28 @@
 
 ### Installation
 So, you have [Node.js](https://nodejs.org/) and [NPM](https://www.npmjs.com), let's get started!
-```sh
-$ npm install
+
+`$ npm install`
 It will start downloading a dependencies to your folder
-```
+
 #### Start gulp and get an enjoyment!
-```sh
-$ npm run start
 
-or
-
-$ gulp
-```
+`$ npm install`
 
 #### Download library from Bower using
-```sh
-$ bower install jquery
-```
+
+`$ bower install jquery`
 
 ### To production
 Your web-site is ready to production? Congratulations!
 
 #### Start building task
-```sh
-$ npm run build
+`$ npm run build`
 
 or
 
-$ gulp build
-```
+`$ gulp build`
+
 #### * drumroll *...
 
 #### You got it! Check folder **"Dist"**! ;)
