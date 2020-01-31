@@ -87,7 +87,7 @@ gulp.task('img', () => gulp.src('app/img/**/*')
 
 // === Watch === //
 gulp.task('watch', () => {
-    gulp.watch('app/scss/**/*.scss', gulp.parallel('scss'));
+    gulp.watch('app/scss/**/*.scss', gulp.series('scss', 'scss-minify'));
     gulp.watch('app/pug/**/*.pug', gulp.parallel('pug'));
     gulp.watch('app/*.html', gulp.parallel('html'));
     gulp.watch(['app/js/**/*.js', '!app/js/main.min.js'], gulp.parallel('scripts'));
