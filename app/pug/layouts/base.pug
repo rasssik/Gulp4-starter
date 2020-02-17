@@ -1,9 +1,11 @@
-include ../modules/head
+<!DOCTYPE html>
+<html lang="en">
+  include ../modules/head
+  body
+    include ../modules/header
 
-body
-  include ../modules/header
+    block page-content
 
-  block page-content
-
-  include ../modules/footer
-  include ../modules/scripts
+    include ../modules/footer
+    include ../modules/scripts
+</html>

@@ -122,3 +122,10 @@ gulp.task('build',
         .pipe(gulp.dest('dist/libs/'));
       done();
     }));
+
+// === SVG === //
+gulp.task('svgstore', () => gulp.src('app/img/svg/*.svg')
+  .pipe(svgmin())
+  .pipe(svgstore())
+  .pipe(rename({ basename: 'sprite' }))
+  .pipe(gulp.dest('./app/img/')));
