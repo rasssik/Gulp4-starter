@@ -9,15 +9,15 @@
 >
 >> fonts
 >
->> img
+>> images
 >
 >> js
 >
 >> libs
 >
->> pug
+>> pages
 >
->> sass
+>> styles
 
 ### Installation
 So, you have [Node.js](https://nodejs.org/) and [NPM](https://www.npmjs.com), let's get started!
@@ -33,7 +33,7 @@ $ npm run start
 
 or
 
-$ gulp
+$ gulp start
 ```
 
 #### Download library from Bower using
