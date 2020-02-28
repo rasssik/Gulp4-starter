@@ -1,0 +1,7 @@
+/* === Parts === */
+@import "common/base";
+
+/* === Styles === */
+.section {
+    @include text;
+}

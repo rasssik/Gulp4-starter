@@ -1,1 +1,1 @@
-@font-face{font-family:Lato;src:url(../fonts/Lato/Lato-Bold.ttf);font-weight:700;font-style:normal;font-stretch:normal}@font-face{font-family:Lato;src:url(../fonts/Lato/Lato-Regular.ttf);font-weight:400;font-style:normal;font-stretch:normal}@font-face{font-family:Lato;src:url(../fonts/Lato/Lato-Thin.ttf);font-weight:100;font-style:normal;font-stretch:normal}.section{font-family:Lato;color:#666}
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap");body{margin:0}.section{font-family:Roboto;color:#666}

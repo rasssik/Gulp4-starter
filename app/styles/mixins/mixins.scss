@@ -1,0 +1,8 @@
+@import '../common/variables';
+@import 'media';
+
+@mixin text {
+    font-family: $primary-font;
+    color: $primary-color;
+    text-transform: uppercase;
+}
