@@ -9,8 +9,11 @@ module.exports     = function styles() {
     return gulp.src('app/styles/*.scss')
         .pipe(sourcemaps.init())
         .pipe(plumber({
-          errorHandler: notify.onError('Error: <%= error.message %>')
-          }))
+          errorHandler: function (err) {
+            console.log(err);
+            this.emit('end');
+          }
+        }))
         .pipe(sass())
         .pipe(autoprefixer({
           cascade: false

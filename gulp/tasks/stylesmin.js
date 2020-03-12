@@ -7,7 +7,12 @@ const gulp         = require('gulp'),
 
 module.exports     = function stylesmin() {
     return gulp.src('app/styles/*.scss')
-        .pipe(plumber())
+        .pipe(plumber({
+          errorHandler: function (err) {
+            console.log(err);
+            this.emit('end');
+          }
+        }))
         .pipe(sass())
         .pipe(autoprefixer({
           cascade: false
