@@ -2,8 +2,7 @@ const gulp         = require('gulp'),
       plumber      = require('gulp-plumber'),
       sass         = require('gulp-sass'),
       sourcemaps   = require('gulp-sourcemaps'),
-      autoprefixer = require('gulp-autoprefixer'),
-      notify       = require('gulp-notify')
+      autoprefixer = require('gulp-autoprefixer')
 
 module.exports     = function styles() {
     return gulp.src('app/styles/*.scss')

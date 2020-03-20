@@ -1,13 +1,13 @@
-const path            = require('path'),
-      fs              = require('fs').promises,
-      open            = require('open'),
-      server          = require('browser-sync').create(),
-      del             = require('del'),
-      lighthouse      = require('lighthouse'),
-      chromeLauncher  = require('chrome-launcher'),
-      { write }       = require('lighthouse/lighthouse-cli/printer'),
-      reportGenerator = require('lighthouse/lighthouse-core/report/ report-generator'),
-      config          = require('../config')
+const   path            = require('path'),
+        fs              = require('fs').promises,
+        open            = require('open'),
+        server          = require('browser-sync').create(),
+        del             = require('del'),
+        lighthouse      = require('lighthouse'),
+        chromeLauncher  = require('chrome-launcher'),
+        { write }       = require('lighthouse/lighthouse-cli/printer'),
+        reportGenerator = require('lighthouse/lighthouse-core/report/ report-generator'),
+        config          = require('../config')
 
 async function getNameHTMLFiles() {
     const files = await fs.readdir(config.buildPath)
@@ -64,7 +64,7 @@ module.exports = async function lighthouse(cb) {
         cb()
         process.exit(0)
     } catch (e) {
-          cb(e.message)
-      process.exit(1)
+            cb(e.message)
+        process.exit(1)
     }
 }

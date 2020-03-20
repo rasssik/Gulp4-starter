@@ -1,13 +1,13 @@
-const gulp      = require('gulp'),
-      images    = require('./images'),
-      sprite    = require('./sprite'),
-      styles    = require('./styles'),
-      stylesmin = require('./stylesmin'),
-      html      = require('./pug'),
-      script    = require('./script'),
-      server    = require('browser-sync').create()
+const   gulp             = require('gulp'),
+        images           = require('./images'),
+        sprite           = require('./sprite'),
+        styles           = require('./styles'),
+        stylesmin        = require('./stylesmin'),
+        htmlConvert      = require('./pug'),
+        script           = require('./script'),
+        server           = require('browser-sync').create()
 
-module.exports  = function serve(cb) {
+module.exports           = function serve(cb) {
     server.init({
         server: 'dist',
         notify: false,
@@ -16,11 +16,11 @@ module.exports  = function serve(cb) {
     })
 
 
-    gulp.watch('app/pages/**/*.pug', gulp.series(html))
+    gulp.watch('app/pages/**/*.pug', gulp.series(htmlConvert))
     gulp.watch('app/images/**/*', gulp.series(images, sprite)).on('change', server.reload)
     gulp.watch('app/styles/**/*.scss', gulp.series(styles, stylesmin, cb => gulp.src('dist/css').pipe(server.stream()).on('end', cb)))
     gulp.watch(['app/js/**/*.js', '!app/js/main.min.js'], gulp.series(script)).on('change', server.reload)
-    gulp.watch('app/*.html').on('change', server.reload)
+    gulp.watch('dist/*.html').on('change', server.reload)
 
 
     return cb()
