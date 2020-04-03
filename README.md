@@ -16,8 +16,8 @@ app
 │    └── ui-kits
 │        └── index
 ├── styles
-│    └── common
-│    └── mixins
+    └── common
+    └── mixins
 ```
 
 ### Installation
