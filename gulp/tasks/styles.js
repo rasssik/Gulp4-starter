@@ -18,6 +18,6 @@ module.exports     = function styles() {
           cascade: false
         }))
         .pipe(sourcemaps.write('app.css'))
-        .pipe(gulp.dest('dist/css'))
+        .pipe(gulp.dest('dist/css/source'))
 }
 
