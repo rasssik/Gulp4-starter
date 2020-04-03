@@ -3,21 +3,22 @@
 ![Gulp4 preview](https://i.postimg.cc/bvFkyFFW/gulp.png)
 
 ### Architecture of project
-
-> app
->> css
->
->> fonts
->
->> images
->
->> js
->
->> libs
->
->> pages
->
->> styles
+```
+app
+├── favicon
+├── fonts
+├── js
+├── libs
+├── pages // pug files are located here; to add some pages, put new .pug file inside this directory
+│    └── images // this folder for images
+│    └── layouts
+│    └── modules
+│    └── ui-kits
+│        └── index
+├── styles
+│    └── common
+│    └── mixins
+```
 
 ### Installation
 So, you have [Node.js](https://nodejs.org/) and [NPM](https://www.npmjs.com), let's get started!
