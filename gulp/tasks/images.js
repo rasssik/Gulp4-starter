@@ -4,7 +4,7 @@ const   gulp     = require('gulp'),
         pngquant = require('imagemin-pngquant')
 
 module.exports   = function images() {
-    return gulp.src(['app/images/**/*', '!app/images/sprite.svg'])
+    return gulp.src(['app/pages/images/**/*', '!app/images/sprite.svg'])
         .pipe(cache(imagemin({
             interlaced: true,
             progressive: true,
@@ -13,4 +13,3 @@ module.exports   = function images() {
         })))
         .pipe(gulp.dest('dist/images'))
 }
-
