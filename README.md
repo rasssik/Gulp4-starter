@@ -15,7 +15,7 @@ app
 │    └── modules
 │    └── ui-kits
 │        └── index
-├── styles
+└── styles
     └── common
     └── mixins
 ```
