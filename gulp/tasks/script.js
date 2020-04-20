@@ -5,7 +5,7 @@ const gulp     = require('gulp'),
 
 module.exports = function script() {
     return gulp.src([
-      'app/js/*.js', '!app/js/main.min.js'
+      'app/scripts/*.js', '!app/scripts/main.min.js'
       ])
       .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
       .pipe(concat('main.min.js'))

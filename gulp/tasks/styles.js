@@ -5,7 +5,7 @@ const gulp         = require('gulp'),
       autoprefixer = require('gulp-autoprefixer')
 
 module.exports     = function styles() {
-    return gulp.src('app/styles/*.scss')
+    return gulp.src('app/styles/*.sass')
         .pipe(sourcemaps.init())
         .pipe(plumber({
           errorHandler: function (err) {

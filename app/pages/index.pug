@@ -1,5 +1,11 @@
 extends layouts/base
 
 block page-content
-  section.section
-    |  Let's start!
+  // remove this code to start writing
+  section.b-section
+    .b-section__content
+      p.b-section__text.b-section__text--margin Hello! ~~
+      p.b-section__text Thank you for using my config!
+      p.b-section__text.b-section__text--flex Now <span>you can start!</span>
+        svg.b-section__icon
+          use(xlink:href='img/sprite.svg#racing-flag')

@@ -3,7 +3,9 @@ head
   meta(http-equiv="X-UA-Compatible" content="IE=edge")
   meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no")
   meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
   title title
+
   link(rel="shortcut icon", href="favicon/favicon.ico", type="image/x-icon")
   link(rel="apple-touch-icon", sizes="180x180", href="favicon/apple-touch-icon.png")
   link(rel="icon", type="image/png", sizes="32x32", href="favicon/favicon-32x32.png")
@@ -12,9 +14,16 @@ head
   link(rel="mask-icon", href="favicon/safari-pinned-tab.svg", color="#5bbad5")
   meta(name="msapplication-TileColor", content="#fce38a")
   meta(name="theme-color", content="#ffffff")
+
   meta(name="keywords" content="")
   meta(name="description" content="")
-  link(rel="stylesheet", href="./libs/normalize.css")
+
+  link(href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet")
+
+  link(rel="stylesheet", href="./libs/normalize.min.css")
+
   link(property="stylesheet" href="css/styles.min.css" rel="stylesheet")
-  link(property="stylesheet" href="css/styles_tablet.min.css" rel="stylesheet" media="(min-width: 760px)")
-  link(property="stylesheet" href="css/styles_desktop.min.css" rel="stylesheet" media="(min-width: 1200px)")
+
+  //If you want to use mobile-first, change strings below
+  //link(property="stylesheet" href="css/styles_tablet.min.css" rel="stylesheet" media="(min-width: 760px)")
+  //link(property="stylesheet" href="css/styles_desktop.min.css" rel="stylesheet" media="(min-width: 1200px)")

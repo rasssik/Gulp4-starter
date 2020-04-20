@@ -11,5 +11,5 @@ module.exports   = function images() {
             svgoPlugins: [{ removeViewBox: false }],
             use: [pngquant()],
         })))
-        .pipe(gulp.dest('dist/images'))
+        .pipe(gulp.dest('dist/img'))
 }
