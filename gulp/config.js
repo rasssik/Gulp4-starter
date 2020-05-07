@@ -1,7 +1,6 @@
 const path     = require('path'),
       root     = path.join(__dirname, '../'),
       src      = path.join(root, 'app')
-
 module.exports = {
     root,
     src,

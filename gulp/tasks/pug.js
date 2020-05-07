@@ -1,7 +1,7 @@
 const   gulp     = require('gulp'),
         plumber  = require('gulp-plumber'),
         pug      = require('gulp-pug'),
-        notify   = require('gulp-notify')
+        notify   = require('gulp-notify');
 
 module.exports   = function htmlConvert() {
     return gulp.src('app/pages/*.pug')

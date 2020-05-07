@@ -7,14 +7,14 @@
 app
 ├── favicon
 ├── fonts
-├── js
+├── images
 ├── libs
 ├── pages // pug files are located here; to add some pages, put new .pug file inside this directory
-│    └── images // this folder for images
 │    └── layouts
 │    └── modules
 │    └── ui-kits
 │        └── index
+├── scripts
 └── styles
     └── common
     └── mixins
