@@ -1,6 +1,6 @@
 # Gulp4 Template
 [![N|Solid](https://i.postimg.cc/6Qnkq1Qp/whimelan.png)](https://github.com/whimelan)
-![Gulp4 preview](https://i.postimg.cc/bvFkyFFW/gulp.png)
+![Gulp4 preview](https://i.postimg.cc/pdjg1r0T/repo.png)
 
 ### Architecture of project
 ```
@@ -37,11 +37,6 @@ or
 $ gulp start
 ```
 
-#### Download library from Bower using
-
-```sh
-$ bower install jquery
-```
 
 ### To production
 Your web-site is ready to production? Congratulations!
