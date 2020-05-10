@@ -2,6 +2,9 @@
 [![N|Solid](https://i.postimg.cc/6Qnkq1Qp/whimelan.png)](https://github.com/whimelan)
 ![Gulp4 preview](https://i.postimg.cc/pdjg1r0T/repo.png)
 
+### Note
+This gulp configuration uses Pug and Sass, if you prefer to use  HTML and SCSS, follow [this link](https://github.com/whimelan/Gulp4-starter-classic) to use habitual config!
+
 ### Architecture of project
 ```
 app
