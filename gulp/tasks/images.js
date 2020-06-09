@@ -5,11 +5,11 @@ const   gulp        = require('gulp'),
 
 module.exports      = function images() {
     return gulp.src(['app/images/**/*', '!app/images/svg/*.svg'])
-        .pipe(cache(imagemin([
-            pngquant({
-                speed: 1,
-                quality: [0.95, 1]
-            }),
-        ])))
-        .pipe(gulp.dest('dist/img'))
+    .pipe(cache(imagemin([
+        pngquant({
+            speed: 1,
+            quality: [0.95, 1]
+        }),
+    ])))
+        .pipe(gulp.dest('dist/images'))
 }

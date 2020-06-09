@@ -7,19 +7,18 @@ const gulp     = require('gulp'),
 
 module.exports = function script() {
     return gulp.src([
-      'app/scripts/*.js', '!app/scripts/main.min.js'
+      'app/js/*.js', '!app/js/main.min.js'
       ])
       .pipe(
         plumber({
           errorHandler: notify.onError('Error: <%= error.message %>')
         }))
-      .pipe(gulp.dest('dist/js'))
       .pipe(
         babel({
           presets: ['@babel/env']
       }))
       .pipe(uglify())
       .pipe(concat('main.min.js'))
-      .pipe(gulp.dest('dist/js'))
+      .pipe(gulp.dest('app/js'))
 }
 

@@ -8,6 +8,6 @@ module.exports   = function sprite() {
         .pipe(svgmin())
         .pipe(svgstore())
         .pipe(rename({ basename: 'sprite' }))
-        .pipe(gulp.dest('./dist/img/'))
+        .pipe(gulp.dest('app/images/'))
 }
 

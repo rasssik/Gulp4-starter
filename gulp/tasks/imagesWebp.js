@@ -6,5 +6,5 @@ module.exports      = function imagesWebp() {
         .pipe(webp({
             quality: 70,
         }))
-        .pipe(gulp.dest('dist/img'))
+        .pipe(gulp.dest('app/images'))
 }

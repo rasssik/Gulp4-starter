@@ -3,26 +3,26 @@
 ![Gulp4 preview](https://i.postimg.cc/pdjg1r0T/repo.png)
 
 ### Note
-This gulp configuration uses Pug and Sass, if you prefer to use  HTML and SCSS, follow [this link](https://github.com/whimelan/Gulp4-starter-classic) to use habitual config!
+This gulp configuration uses Pug and Sass, there are many automatical processes as a converting to WebP, group media queries, etc.
 
 ### Architecture of project
 ```
 app
+├── css
+│    └── common
+│    └── mixins
 ├── favicon
 ├── fonts
 ├── images
+├── js
 ├── libs
-├── pages // pug files are located here; to add some pages, put new .pug file inside this directory
-│    └── layouts
-│    └── modules
-│    └── ui-kits
-│        └── index
-├── scripts
-└── styles
-    └── common
-    └── mixins
+└── pages // pug files are located here; to add some pages, put new .pug file inside this directory
+    └── layouts
+    └── modules
+    └── ui-kits
+    └── index
 ```
-
+Also, in app dir located index.html compiled file. If you do not want to use pug, you can write HTML right here. It still works correctly and fast. To add pages, put new .html file near index.html!
 ### Installation
 So, you have [Node.js](https://nodejs.org/) and [NPM](https://www.npmjs.com), let's get started!
 ```sh

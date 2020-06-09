@@ -3,13 +3,12 @@ const gulp         = require('gulp'),
       sass         = require('gulp-sass'),
       cssnano      = require('gulp-cssnano'),
       rename       = require('gulp-rename'),
-      sourcemaps   = require('gulp-sourcemaps'),
       autoprefixer = require('gulp-autoprefixer'),
       webpcss      = require('gulp-webpcss'),
       gcmq         = require('gulp-group-css-media-queries');
+
 module.exports     = function styles() {
-    return gulp.src('app/styles/*.sass')
-        .pipe(sourcemaps.init())
+    return gulp.src('app/css/*.{sass,scss}')
         .pipe(plumber({
           errorHandler: function (err) {
             console.log(err);
@@ -18,6 +17,7 @@ module.exports     = function styles() {
         }))
         .pipe(sass(
           {
+            noCache: true,
             outputStyle: 'expanded'
           }
         ))
@@ -27,9 +27,9 @@ module.exports     = function styles() {
         }))
         .pipe(gcmq())
         .pipe(webpcss())
-        .pipe(gulp.dest('dist/css'))
+        .pipe(gulp.dest('app/css'))
         .pipe(cssnano())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('dist/css'))
+        .pipe(gulp.dest('app/css'))
 }
 

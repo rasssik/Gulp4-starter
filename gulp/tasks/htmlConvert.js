@@ -11,6 +11,6 @@ module.exports   = function htmlConvert() {
         .pipe(pug({
             pretty: true
         }))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('app'))
 }
 

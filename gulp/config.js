@@ -4,7 +4,7 @@ const path     = require('path'),
 module.exports = {
     root,
     src,
-    buildPath: path.join(root, '/dist'),
+    buildPath: path.join(root, '/app'),
     lighthouse: {
         reportPath: path.join(root, 'reports'),
         PORT: 8080,

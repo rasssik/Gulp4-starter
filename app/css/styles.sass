@@ -1,0 +1,64 @@
+// \ === Parts === /
+@import common/base
+
+
+// \ === Styles === /
+
+html
+    height: 100%
+body
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif
+    min-height: 100%
+    display: grid
+    grid-template-rows: auto 1fr auto
+    margin: 0
+    padding: 0
+
+// --- SASS --- //
+// +breakpoint(xs)
+
+// --- SCSS --- //
+//@include breakpoint(xs) {}
+
+
+
+// remove this code
+p
+    margin: 0
+$dark: #222
+
+=wrap
+    max-width: 1180px
+    margin: 0 auto
+    padding: 0 15px
+
+.b-header
+    display: flex
+    align-items: center
+    min-height: 55px
+    border-bottom: 1px solid $dark
+    &__navigation
+        display: flex
+        list-style: none
+        padding: 0
+        margin: 0
+        li
+            &:first-child
+                a
+                    padding: 15px 17px 15px 0
+    &__link
+        color: $dark
+        padding: 15px 17px
+        text-decoration: none
+
+.b-section
+    margin-top: 40px
+.b-footer
+    display: flex
+    align-items: center
+    min-height: 55px
+    border-top: 1px solid $dark
+.b-wrapper
+    +wrap
+    width: 100%
+
