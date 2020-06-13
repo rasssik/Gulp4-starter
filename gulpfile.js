@@ -1,14 +1,12 @@
 const   gulp          = require('gulp'),
         serve         = require('./gulp/tasks/serve'),
         htmlConvert   = require('./gulp/tasks/htmlConvert'),
-        htmlFinal     = require('./gulp/tasks/htmlFinal'),
         styles        = require('./gulp/tasks/styles'),
         script        = require('./gulp/tasks/script'),
-        imagesWebp    = require('./gulp/tasks/imagesWebp'),
         images        = require('./gulp/tasks/images'),
         sprite        = require('./gulp/tasks/sprite'),
         clean         = require('./gulp/tasks/clean'),
-        dev           = gulp.parallel(htmlConvert, htmlFinal, styles, imagesWebp, script, sprite),
+        dev           = gulp.parallel(htmlConvert, styles, script, sprite),
         build         = gulp.series(clean, dev, images,
             (done) => {
                 gulp.src([
@@ -26,8 +24,8 @@ const   gulp          = require('gulp'),
                 gulp.src('app/favicon/**/*')
                     .pipe(gulp.dest('dist/favicon'));
 
-                gulp.src('app/scripts/**/*.js')
-                    .pipe(gulp.dest('dist/scripts'));
+                gulp.src('app/js/**/*.js')
+                    .pipe(gulp.dest('dist/js'));
 
                 gulp.src('app/*.html')
                     .pipe(gulp.dest('dist'));
