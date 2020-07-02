@@ -18,7 +18,7 @@ module.exports     = function styles() {
         .pipe(sass(
           {
             noCache: true,
-            outputStyle: 'expanded'
+            outputStyle: 'compressed'
           }
         ))
         .pipe(autoprefixer({
