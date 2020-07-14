@@ -3,6 +3,7 @@ const gulp     = require('gulp'),
       concat   = require('gulp-concat'),
       notify   = require('gulp-notify'),
       babel    = require('gulp-babel'),
+      sourcemaps   = require('gulp-sourcemaps'),
       uglify   = require('gulp-uglify');
 
 module.exports = function script() {
@@ -13,12 +14,14 @@ module.exports = function script() {
         plumber({
           errorHandler: notify.onError('Error: <%= error.message %>')
         }))
+      .pipe(sourcemaps.init())
       .pipe(
         babel({
           presets: ['@babel/env']
       }))
       .pipe(uglify())
       .pipe(concat('main.min.js'))
+      .pipe(sourcemaps.write())
       .pipe(gulp.dest('app/js'))
 }
 

@@ -1,10 +1,11 @@
 const gulp         = require('gulp'),
       plumber      = require('gulp-plumber'),
       sass         = require('gulp-sass'),
+      sourcemaps   = require('gulp-sourcemaps'),
       cssnano      = require('gulp-cssnano'),
       rename       = require('gulp-rename'),
       autoprefixer = require('gulp-autoprefixer'),
-      webpcss      = require('gulp-webpcss'),
+      webpcss      = require('gulp-webp-css'),
       gcmq         = require('gulp-group-css-media-queries');
 
 module.exports     = function styles() {
@@ -15,6 +16,7 @@ module.exports     = function styles() {
             this.emit('end');
           }
         }))
+        .pipe(sourcemaps.init())
         .pipe(sass(
           {
             noCache: true,
@@ -30,6 +32,7 @@ module.exports     = function styles() {
         .pipe(gulp.dest('app/css'))
         .pipe(cssnano())
         .pipe(rename({ suffix: '.min' }))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('app/css'))
 }
 
