@@ -3,7 +3,7 @@
 ![Gulp4 preview](https://i.postimg.cc/pdjg1r0T/repo.png)
 
 ### Note
-This gulp configuration uses Pug and Sass, there are many automatical processes as a converting to WebP, group media queries, etc.
+This gulp configuration uses Pug and Sass, there are many automatical processes as a group media queries, etc.
 
 ### Architecture of project
 ```
