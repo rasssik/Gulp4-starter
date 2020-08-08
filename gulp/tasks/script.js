@@ -4,7 +4,8 @@ const gulp = require('gulp'),
   notify = require('gulp-notify'),
   babel = require('gulp-babel'),
   sourcemaps = require('gulp-sourcemaps'),
-  uglify = require('gulp-uglify');
+  uglify = require('gulp-uglify'),
+  rename = require('gulp-rename');
 
 module.exports = function script() {
   return gulp
@@ -21,7 +22,8 @@ module.exports = function script() {
       })
     )
     .pipe(uglify())
-    .pipe(concat('main.min.js')) // comment this string to make several scripts instead of the concatenated one
-    .pipe(sourcemaps.write())
+    .pipe(concat('main.js')) // comment this string to make several scripts instead of the concatenated one
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('app/js'));
 };
