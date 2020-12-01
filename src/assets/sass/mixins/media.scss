@@ -1,0 +1,40 @@
+// --- SASS --- //
+
+// =breakpoint($point)
+//     @if $point == xs
+//         @media screen and (min-width: 36em) /* ~580 px */
+//             @content
+//     @if $point == sm
+//         @media screen and (min-width: 48em) /* ~770 px */
+//             @content
+//     @if $point == md
+//         @media screen and (min-width: 62em) /* ~990 px */
+//             @content
+//     @if $point == lg
+//         @media screen and (min-width: 74em) /* ~1200 px */
+//             @content
+
+// --- SCSS --- //
+
+@mixin breakpoint($point) {
+    @if $point == xs {
+        @media screen and (max-width: 36em) /* ~580 px */ {
+            @content;
+        }
+    }
+    @if $point == sm {
+        @media screen and (max-width: 48em) /* ~770 px */ {
+            @content;
+        }
+    }
+    @if $point == md {
+        @media screen and (max-width: 62em) /* ~990 px */ {
+            @content;
+        }
+    }
+    @if $point == lg {
+        @media screen and (max-width: 74em) /* ~1200 px */ {
+            @content;
+        }
+    }
+}

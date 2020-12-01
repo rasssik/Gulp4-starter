@@ -6,7 +6,7 @@ const gulp = require('gulp'),
 
 module.exports = function htmlConvert() {
   return gulp
-    .src('app/pages/*.pug')
+    .src('src/pages/*.pug')
     .pipe(
       plumber({ errorHandler: notify.onError('Error: <%= error.message %>') })
     )
@@ -15,6 +15,7 @@ module.exports = function htmlConvert() {
         pretty: true,
       })
     )
+    .pipe(plumber.stop())
     .pipe(
       prettyHtml({
         indent_size: 2,
@@ -22,5 +23,5 @@ module.exports = function htmlConvert() {
         unformatted: ['code', 'pre', 'em', 'strong', 'span', 'i', 'b', 'br'],
       })
     )
-    .pipe(gulp.dest('app'));
+    .pipe(gulp.dest('src'));
 };

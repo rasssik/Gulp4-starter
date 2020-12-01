@@ -9,20 +9,13 @@ const gulp = require('gulp'),
   dev = gulp.parallel(htmlConvert, styles, script, sprite),
   build = gulp.series(clean, dev, images, done => {
     gulp
-      .src([
-        'app/css/styles.css',
-        'app/css/styles_tablet.css',
-        'app/css/styles_desktop.css',
-        'app/css/styles.min.css',
-        'app/css/styles_tablet.min.css',
-        'app/css/styles_desktop.min.css',
-      ])
-      .pipe(gulp.dest('dist/css'));
-    gulp.src('app/fonts/**/*').pipe(gulp.dest('dist/fonts'));
-    gulp.src('app/favicon/**/*').pipe(gulp.dest('dist/favicon'));
-    gulp.src('app/js/**/*.js').pipe(gulp.dest('dist/js'));
-    gulp.src('app/*.html').pipe(gulp.dest('dist'));
-    gulp.src('app/libs/**').pipe(gulp.dest('dist/libs/'));
+      .src(['src/assets/css/*.css', 'src/assets/css/*.min.css'])
+      .pipe(gulp.dest('dist/assets/css/'));
+    gulp.src('src/assets/fonts/**/*').pipe(gulp.dest('dist/assets/fonts/'));
+    gulp.src('src/static/favicon/**/*').pipe(gulp.dest('dist/static/favicon/'));
+    gulp.src('src/assets/js/**/*.js').pipe(gulp.dest('dist/assets/js/'));
+    gulp.src('src/*.html').pipe(gulp.dest('dist'));
+    gulp.src('src/assets/libs/**').pipe(gulp.dest('dist/assets/libs/'));
     done();
   });
 module.exports.start = gulp.series(dev, serve);

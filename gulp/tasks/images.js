@@ -5,16 +5,16 @@ const gulp = require('gulp'),
 
 module.exports = function images() {
   return gulp
-    .src(['app/images/**/*', '!app/images/svg/*.svg'])
+    .src(['src/assets/images/**/*', '!src/assets/images/svg/*.svg'])
     .pipe(
       cache(
         imagemin([
           pngquant({
             speed: 1,
-            quality: [0.95, 1],
+            quality: [0.75, 0.85],
           }),
         ])
       )
     )
-    .pipe(gulp.dest('dist/images'));
+    .pipe(gulp.dest('dist/assets/images'));
 };

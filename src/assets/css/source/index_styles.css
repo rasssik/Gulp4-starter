@@ -1,0 +1,40 @@
+body {
+  font-weight: 300;
+  background-color: #fff;
+}
+
+.app {
+  padding: 10px;
+}
+
+.app__welcome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "Roboto";
+  color: #000;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.app__icon {
+  width: 35px;
+  height: 35px;
+  margin: 0px 0px 0px 5px;
+}
+
+.app__link {
+  font-family: "Roboto";
+  display: block;
+  color: grey;
+  font-size: 18px;
+  text-decoration: none;
+  margin: 15px 0px 0px 0px;
+}
+
+.app__link:hover {
+  text-decoration: underline;
+}

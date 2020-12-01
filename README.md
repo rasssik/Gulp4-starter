@@ -7,7 +7,7 @@ This gulp configuration uses Pug and Sass, there are many automatical processes 
 
 ### Architecture of project
 ```
-app
+src
 ├── css
 │    └── common
 │    └── mixins

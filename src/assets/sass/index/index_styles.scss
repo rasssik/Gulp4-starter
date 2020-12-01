@@ -1,0 +1,36 @@
+//## IMPORTING
+@import '../common/base';
+
+//## GENERAL STYLES
+body {
+    font-weight: 300;
+    background-color: #fff;
+}
+
+.app {
+    padding: 10px;
+    &__welcome {
+        display: flex;
+        align-items: center;
+        font-family: $primary-font;
+        color: #000;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+    &__icon {
+        width: 35px;
+        height: 35px;
+        margin: 0px 0px 0px 5px;
+    }
+    &__link {
+        font-family: $primary-font;
+        display: block;
+        color: grey;
+        font-size: 18px;
+        text-decoration: none;
+        margin: 15px 0px 0px 0px;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

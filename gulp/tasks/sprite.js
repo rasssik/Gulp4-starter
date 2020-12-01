@@ -5,9 +5,9 @@ const gulp = require('gulp'),
 
 module.exports = function sprite() {
   return gulp
-    .src('app/images/svg/*.svg')
+    .src('src/assets/images/svg/*.svg')
     .pipe(svgmin())
     .pipe(svgstore())
     .pipe(rename({ basename: 'sprite' }))
-    .pipe(gulp.dest('app/images/'));
+    .pipe(gulp.dest('src/assets/images/sprite/'));
 };

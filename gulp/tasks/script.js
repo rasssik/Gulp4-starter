@@ -6,24 +6,33 @@ const gulp = require('gulp'),
   sourcemaps = require('gulp-sourcemaps'),
   uglify = require('gulp-uglify'),
   rename = require('gulp-rename');
-
 module.exports = function script() {
-  return gulp
-    .src(['app/js/*.js', '!app/js/*.min.js'])
-    .pipe(
-      plumber({
-        errorHandler: notify.onError('Error: <%= error.message %>'),
-      })
-    )
-    .pipe(sourcemaps.init())
-    .pipe(
-      babel({
-        presets: ['@babel/env'],
-      })
-    )
-    .pipe(uglify())
-    .pipe(concat('main.js')) // comment this string to make several scripts instead of the concatenated one
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('app/js'));
+  return (
+    gulp
+      .src('src/js/**/*.js')
+      .pipe(
+        plumber({
+          errorHandler: notify.onError('Error: <%= error.message %>'),
+        })
+      )
+      .pipe(plumber.stop())
+      .pipe(sourcemaps.init())
+      .pipe(
+        babel({
+          presets: ['@babel/env'],
+        })
+      )
+      .pipe(gulp.dest('src/assets/js/source/'))
+
+      .pipe(uglify())
+      // .pipe(concat('main.js')) // uncomment this string to make several scripts instead of the concatenated one
+      .pipe(rename({ suffix: '.min' }))
+      .pipe(sourcemaps.write('.'))
+      .pipe(
+        rename({
+          dirname: '',
+        })
+      )
+      .pipe(gulp.dest('src/assets/js/'))
+  );
 };

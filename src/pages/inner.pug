@@ -1,0 +1,11 @@
+extends layout/base
+
+block variables
+  -var title = 'Внутренняя'
+  -var styleName = 'inner'
+
+block page-content
+  p Welcome to inner page!
+  a(href='index.html') index
+  block script
+    script(src="/assets/js/inner_common.min.js")

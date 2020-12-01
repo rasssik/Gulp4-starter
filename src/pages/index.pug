@@ -1,0 +1,15 @@
+extends layout/base
+
+block variables
+  -var title = 'Главная'
+  -var styleName = 'index'
+
+block page-content
+  main.app
+    span.app__welcome Welcome!
+      +icon('app__icon', 'flag')
+    a(href='inner.html').app__link inner
+
+
+block script
+  script(src="/assets/js/index_common.min.js")

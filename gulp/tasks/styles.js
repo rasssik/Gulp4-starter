@@ -9,7 +9,11 @@ const gulp = require('gulp'),
 
 module.exports = function styles() {
   return gulp
-    .src('app/css/*.{sass,scss}')
+    .src([
+      'src/assets/sass/**/*.scss',
+      '!src/assets/sass/common/**/*',
+      '!src/assets/sass/mixins/**/*',
+    ])
     .pipe(
       plumber({
         errorHandler(err) {
@@ -32,9 +36,14 @@ module.exports = function styles() {
       })
     )
     .pipe(gcmq())
-    .pipe(gulp.dest('app/css'))
+    .pipe(
+      rename({
+        dirname: '',
+      })
+    )
+    .pipe(gulp.dest('src/assets/css/source'))
     .pipe(cssnano())
     .pipe(rename({ suffix: '.min' }))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('app/css'));
+    .pipe(gulp.dest('src/assets/css'));
 };
