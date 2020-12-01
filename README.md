@@ -6,6 +6,9 @@
 This gulp configuration uses Pug and Sass, there are many automatical processes as a group media queries, etc.
 
 Also, in app dir located index.html compiled file. If you do not want to use pug, you can write HTML right here. It still works correctly and fast. To add pages, put new .html file near index.html!
+
+
+To use simple one-page/bitrix/etc. model, change branch to solo.
 ### Installation
 So, you have [Node.js](https://nodejs.org/) and [NPM](https://www.npmjs.com), let's get started!
 ```sh
