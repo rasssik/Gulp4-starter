@@ -15,6 +15,7 @@ module.exports = function serve(done) {
   gulp
     .watch('src/pages/**/*.pug', gulp.series(htmlConvert))
     .on('change', server.reload);
+  gulp.watch('src/*.html').on('change', server.reload);
   gulp
     .watch('src/assets/images/svg/*.svg', gulp.series(sprite))
     .on('change', server.reload);
